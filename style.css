@@ -139,3 +139,27 @@ nav a:hover {
         max-width: 90%;
     }
 }
+@media (max-width: 422px) {
+
+    nav {
+        padding: 2px 0;
+    }
+
+    nav ul {
+        gap: 2px;
+    }
+
+    nav a {
+        padding: 4px 5px;
+        font-size: 0.7rem;
+    }
+
+    .content h1 {
+        font-size: 1.0rem;
+    }
+
+    .content p {
+        font-size: 0.7rem;
+        max-width: 90%;
+    }
+}
