@@ -83,179 +83,205 @@
         .bouncy-hover:hover { transform: scale(1.05); }
         .shadow-pink { box-shadow: 0 4px 16px rgba(224, 64, 160, 0.2); }
         .shadow-purple { box-shadow: 0 4px 16px rgba(124, 82, 170, 0.2); }
-        .scroll-scrolled { background-color: #e040a0 !important; box-shadow: 0 4px 16px rgba(224, 64, 160, 0.2); }
+        .scrolled { background-color: rgba(224, 64, 160, 0.85) !important; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 4px 16px rgba(224, 64, 160, 0.2); }
+        .scrolled span, .scrolled a, .scrolled button { color: #ffffff !important; }
+        .scrolled a.border-b-2 { border-color: #ffffff !important; }
+        .nav-link.active { color: #e040a0 !important; font-weight: 900; border-bottom: 2px solid #e040a0; }
+        .scrolled .nav-link.active { color: #ffffff !important; border-bottom-color: #ffffff; }
+        .scrolled button.bg-primary { background-color: #ffffff !important; color: #e040a0 !important; box-shadow: 0 4px 16px rgba(255, 255, 255, 0.3); }
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="text-on-surface">
-<!-- TopAppBar -->
-<header class="fixed top-0 w-full z-50 bg-transparent transition-colors duration-500 ease-in-out flex justify-between items-center px-6 py-4 max-w-full" id="top-app-bar">
-<div class="flex items-center gap-2">
-<span class="text-2xl font-black text-primary hover:scale-110 transition-transform cursor-pointer">Sugar n' Whisk</span>
-</div>
-<nav class="hidden md:flex items-center gap-8">
-<a class="text-on-surface font-medium hover:text-primary hover:scale-105 transition-all duration-300 ease-out" href="#">Home</a>
-<a class="text-primary font-bold border-b-2 border-primary hover:scale-105 transition-all duration-300 ease-out" href="#">Discover</a>
-<a class="text-on-surface font-medium hover:text-primary hover:scale-105 transition-all duration-300 ease-out" href="#">Favorites</a>
-<a class="text-on-surface font-medium hover:text-primary hover:scale-105 transition-all duration-300 ease-out" href="#">Messages</a>
-</nav>
-<div class="flex items-center gap-3">
-<button class="px-5 py-2 rounded-full font-bold text-on-surface-variant hover:bg-secondary-container/50 transition-colors">Log In</button>
-<button class="bg-primary text-white px-6 py-2 rounded-full font-bold shadow-pink bouncy-hover active:scale-95 transition-all">Sign Up</button>
-</div>
-</header>
-<main class="pt-24 pb-32">
-<!-- Hero Section -->
-<section class="px-6 mb-12">
-<div class="relative w-full h-[450px] rounded-xl overflow-hidden shadow-pink group">
-<div class="absolute inset-0 bg-gradient-to-r from-on-primary-fixed/60 to-transparent z-10"></div>
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A lush, high-resolution overhead shot of assorted artisanal pastries" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6DM3BMlX-tF9QwMpBfcrV4qwl_8IbRkPkhYkskTMo8NeKQmwWOopDUe-cNQ57jWqc1WHMgywJZJywMfKa5dM2l86eI7WaD7jwOxW4pI8cYA-Ys3OhJXiI0fXlxohaBEf3fnPpHJu1pUQbq68DrZyUeNFOW4MIAHvkrQRwqBd9ctgKlulcmDalKhyiX6wdpWiPOLMN2kui6rmCirJL4YzNT_M6emibnVuIjw5fmRUFyjf-7VFpfE6jTVTQRxSmyjFmOKe6zJOReuLH"/>
-<div class="absolute bottom-12 left-12 z-20 max-w-lg">
-<h1 class="text-white text-5xl md:text-7xl font-black leading-tight mb-4 drop-shadow-lg">Sweet Dreams are Made of This</h1>
-<p class="text-white/90 text-lg md:text-xl font-medium mb-6">Indulge in our daily-baked collection of artisanal wonders. Fresh, fluffy, and full of joy.</p>
-<button class="bg-primary text-white px-8 py-4 rounded-full font-black text-lg shadow-pink bouncy-hover">Explore Bakery</button>
-</div>
-</div>
-</section>
-<!-- Sweet Categories -->
-<section class="px-6 mb-16">
-<div class="flex items-center justify-between mb-8">
-<h2 class="text-3xl font-black text-on-surface tracking-tight">Sweet Categories</h2>
-<span class="text-primary font-bold cursor-pointer hover:underline">View All</span>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-<!-- Cakes -->
-<div class="bg-primary-fixed rounded-lg p-6 flex flex-col items-center justify-center gap-4 cursor-pointer bouncy-hover border-2 border-transparent hover:border-primary transition-all">
-<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-pink">
-<span class="material-symbols-outlined text-primary text-4xl" data-icon="cake">cake</span>
-</div>
-<span class="font-black text-on-primary-fixed text-lg">Cakes</span>
-</div>
-<!-- Cookies -->
-<div class="bg-secondary-fixed rounded-lg p-6 flex flex-col items-center justify-center gap-4 cursor-pointer bouncy-hover border-2 border-transparent hover:border-secondary transition-all">
-<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-purple">
-<span class="material-symbols-outlined text-secondary text-4xl" data-icon="cookie">cookie</span>
-</div>
-<span class="font-black text-on-secondary-fixed text-lg">Cookies</span>
-</div>
-<!-- Croissants -->
-<div class="bg-tertiary-fixed rounded-lg p-6 flex flex-col items-center justify-center gap-4 cursor-pointer bouncy-hover border-2 border-transparent hover:border-tertiary transition-all">
-<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-md shadow-tertiary/20">
-<span class="material-symbols-outlined text-tertiary text-4xl" data-icon="bakery_dining">bakery_dining</span>
-</div>
-<span class="font-black text-on-tertiary-fixed text-lg">Croissants</span>
-</div>
-<!-- Donuts -->
-<div class="bg-primary-fixed-dim rounded-lg p-6 flex flex-col items-center justify-center gap-4 cursor-pointer bouncy-hover border-2 border-transparent hover:border-primary-container transition-all">
-<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-pink">
-<span class="material-symbols-outlined text-primary text-4xl" data-icon="donut_large">donut_large</span>
-</div>
-<span class="font-black text-on-primary-fixed text-lg">Donuts</span>
-</div>
-</div>
-</section>
-<!-- Chef's Special Highlight -->
-<section class="px-6 mb-16">
-<div class="bg-on-surface-variant/5 rounded-xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-12 border-2 border-dashed border-outline-variant">
-<div class="w-full md:w-1/2 aspect-square md:aspect-video rounded-lg overflow-hidden shadow-purple">
-<img class="w-full h-full object-cover" data-alt="Macro shot of Pink Velvet Mille-Feuille" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ5TAXU1efy2hybJRQr79wDeEFiqa5inKEry4rCXVVIGEZiqyP1mWI6F-C8sRH5Sar2fGZsSQXPWIixL8FCyGGA5xgJbUTm37tYbxixMzgfdQ5L_p2q5MtiGE8LCP4Lu0QwPP-IqJwziQ2FkEc-KoMPMm9Az09MHpsgMB6o1-wgzi_qw_nhaGMMrX1XBm_y6GM71ctidJu-4Xws3HFMqlRh32IgVpvHYosnjA2w46z-CZASvQ-dLpxKPSxykPSzBtjP9Eo1litulVl"/>
-</div>
-<div class="w-full md:w-1/2">
-<span class="bg-secondary text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest mb-4 inline-block">Chef's Special</span>
-<h2 class="text-4xl font-black mb-4 text-on-surface">The Pink Velvet Mille-Feuille</h2>
-<p class="text-on-surface-variant text-lg mb-8 leading-relaxed">Experience a masterclass in textures. Seven layers of hand-laminated pastry dough filled with our signature pink pitaya-infused chantilly cream and topped with fresh organic berries.</p>
-<div class="flex items-center gap-6">
-<span class="text-3xl font-black text-primary">$12.50</span>
-<button class="bg-secondary text-white px-8 py-4 rounded-full font-black bouncy-hover shadow-purple">Add to Bag</button>
-</div>
-</div>
-</div>
-</section>
-<!-- Featured Products Grid -->
-<section class="px-6 mb-20">
-<div class="flex items-center justify-between mb-8">
-<h2 class="text-3xl font-black text-on-surface tracking-tight">Our Best Sellers</h2>
-<div class="flex gap-2">
-<button class="p-2 rounded-full border border-outline-variant text-on-surface-variant hover:bg-surface-variant">
-<span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
-</button>
-<button class="p-2 rounded-full border border-outline-variant text-on-surface-variant hover:bg-surface-variant">
-<span class="material-symbols-outlined" data-icon="sort">sort</span>
-</button>
-</div>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-<!-- Product 1 -->
-<div class="bg-white rounded-lg p-4 shadow-pink group bouncy-hover border border-surface-variant">
-<div class="relative aspect-square rounded-lg overflow-hidden mb-4">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Strawberry donut" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh73K1NB2NKl_4gucbbFMOC_tgyaaxm6KJ4rOCTQOK90eAGU9l4i-rYPfZJTqPImLpNGCHEDDyzss04U__oKH2HumynwEUzYEtUpgmEeTv-NRXVvji2sIsqaNPIpDfTLlS6T05NDQ7KVFTs4oKFzhXr306qwMi4v5zGJUL_1iPqwNraKuYKKW7PKiLdLit-9heZMnnz93emTsdSaIGSJCy270Fy6qXK-M3ImJ5P0noOEVxYq7uW2LMwqe-5PiDSKpMDkicKxiJUWzQ"/>
-<button class="absolute top-3 right-3 bg-white/80 backdrop-blur p-2 rounded-full text-primary hover:text-white hover:bg-primary transition-colors">
-<span class="material-symbols-outlined" data-icon="favorite" style='font-variation-settings: "FILL" 1;'>favorite</span>
-</button>
-</div>
-<h3 class="font-black text-xl text-on-surface mb-1">Strawberry Sprinkles</h3>
-<p class="text-on-surface-variant text-sm mb-4">Fluffy brioche base, real berry glaze.</p>
-<div class="flex items-center justify-between">
-<span class="text-lg font-black text-primary">$4.50</span>
-<button class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center bouncy-hover shadow-pink">
-<span class="material-symbols-outlined" data-icon="add">add</span>
-</button>
-</div>
-</div>
-<!-- Product 2 -->
-<div class="bg-white rounded-lg p-4 shadow-pink group bouncy-hover border border-surface-variant">
-<div class="relative aspect-square rounded-lg overflow-hidden mb-4">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Rainbow Macarons" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsvy57eS57tz-W_I98zCOV12NkCWBb03PQX5CVgZAEOKTnTNmNymWukCXm7KaEL2EFBZPuyv6LaBnBrGyGbTttUlkHrhqrq8Eeg7a4quZoGh6vS2BtYzSNbqtrioyiZvCJQnF8x91dl-IYN5WBdgyChuRncZasABmmDGP6tquL6IzJvcotRggPDIWolAAu_NDJq14sAhHx8pZE54VhjpxmEyUE7fAdXdnnGrz8n_F1Go6EE_ZNfJBJuZ6z3EXBifrsnfdD--N5opYM"/>
-<button class="absolute top-3 right-3 bg-white/80 backdrop-blur p-2 rounded-full text-on-surface hover:text-primary transition-colors">
-<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
-</button>
-</div>
-<h3 class="font-black text-xl text-on-surface mb-1">Rainbow Macarons</h3>
-<p class="text-on-surface-variant text-sm mb-4">Pack of 6, assorted flavors.</p>
-<div class="flex items-center justify-between">
-<span class="text-lg font-black text-primary">$14.00</span>
-<button class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center bouncy-hover shadow-pink">
-<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
-</button>
-</div>
-</div>
-<!-- Product 3 -->
-<div class="bg-white rounded-lg p-4 shadow-pink group bouncy-hover border border-surface-variant">
-<div class="relative aspect-square rounded-lg overflow-hidden mb-4">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Almond Croissant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLYxFZy2HoU6BbYAvIAwAvoASysDGMHYf594_nOZ6gw4il1OYAGSoVZ4Xqrujx2SgI_llazy-MbzH23hMtok-0uAqLiJLbrlrrFZkZBkSEFzQIIR7UBOt0ZIhKMh_eJexeR7_gH45ss7nbeRABootX_GLFzs2ALlNKjMZvY8ULdBZEgGFBUOkTxYKRi6qOk_Ro5COuEVxZyF2qTiE8lyfRbpftyHkQEjvKYnvr4b51T7c-NdOg0UY-MUD8Ed0Dltc9_e88p41LjAJ5"/>
-<button class="absolute top-3 right-3 bg-white/80 backdrop-blur p-2 rounded-full text-on-surface hover:text-primary transition-colors">
-<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
-</button>
-</div>
-<h3 class="font-black text-xl text-on-surface mb-1">Almond Croissant</h3>
-<p class="text-on-surface-variant text-sm mb-4">Double baked with almond frangipane.</p>
-<div class="flex items-center justify-between">
-<span class="text-lg font-black text-primary">$5.50</span>
-<button class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center bouncy-hover shadow-pink">
-<span class="material-symbols-outlined" data-icon="add">add</span>
-</button>
-</div>
-</div>
-<!-- Product 4 -->
-<div class="bg-white rounded-lg p-4 shadow-pink group bouncy-hover border border-surface-variant">
-<div class="relative aspect-square rounded-lg overflow-hidden mb-4">
-<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Ube Cake" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBVWbiy_7sOLsaDgFur79KYmS9seKSMD40cnWCegLtWng8lV2f_Xpur6vxVjFo1w7jsc-sinaK4HtsvIFujOz7COXsCGgeOK4nXdzPntguhIzz37SXW18WXPFJxWKkkbBlTBxsXjqZB7piSieS-DrvmYbWPx23muOJzQVcJKnhWQCg3tqpPrugwcud8PrvzzIapzfisp-Zv4jTobXNCmjm0tuN_BQpwZKh_VmBSVDmu9C7RHT3V_g6vK5_VW4Yc0Vd6CGGaGHZabGG"/>
-<button class="absolute top-3 right-3 bg-white/80 backdrop-blur p-2 rounded-full text-on-surface hover:text-primary transition-colors">
-<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
-</button>
-</div>
-<h3 class="font-black text-xl text-on-surface mb-1">Ube Dream Slice</h3>
-<p class="text-on-surface-variant text-sm mb-4">Purple yam sponge with coconut curd.</p>
-<div class="flex items-center justify-between">
-<span class="text-lg font-black text-primary">$7.25</span>
-<button class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center bouncy-hover shadow-pink">
-<span class="material-symbols-outlined" data-icon="add">add</span>
-</button>
-</div>
-</div>
-</div>
-</section>
+
+    <!-- TopAppBar -->
+    <header class="fixed top-0 w-full z-50 bg-transparent transition-colors duration-500 ease-in-out flex justify-between items-center px-6 py-2 max-w-full" id="main-nav">
+        <div class="flex items-center gap-2">
+            <span class="text-2xl font-black text-primary cursor-pointer">Sugar n' Whisk</span>
+        </div>
+        <nav class="hidden md:flex items-center gap-8">
+            <a class="nav-link text-on-surface font-medium hover:text-primary hover:scale-105 transition-all duration-300 ease-out" data-section="hero" href="#hero">Home</a>
+            <a class="nav-link text-on-surface font-medium hover:text-primary hover:scale-105 transition-all duration-300 ease-out" data-section="hero" href="#hero">Discover</a>
+            <a class="nav-link text-on-surface font-medium hover:text-primary hover:scale-105 transition-all duration-300 ease-out" data-section="best-sellers" href="#best-sellers">Favorites</a>
+            <a class="nav-link text-on-surface font-medium hover:text-primary hover:scale-105 transition-all duration-300 ease-out" data-section="reviews" href="#reviews">Messages</a>
+        </nav>
+        <div class="flex items-center gap-3">
+            <button class="px-5 py-2 rounded-full font-bold text-on-surface-variant hover:bg-secondary-container/50 transition-colors">Log In</button>
+            <button class="bg-primary text-white px-6 py-2 rounded-full font-bold shadow-pink bouncy-hover active:scale-95 transition-all">Sign Up</button>
+        </div>
+    </header>
+
+    <main class="pt-24 pb-32">
+
+        <!-- Hero Section -->
+        <section id="hero" class="px-4 mb-12">
+            <div class="relative w-full h-[450px] rounded-xl overflow-hidden shadow-pink group">
+                <div class="absolute inset-0 bg-gradient-to-r from-on-primary-fixed/60 to-transparent z-10"></div>
+                <div class="absolute inset-0 bg-pink-200/15 backdrop-blur-[3px] z-15" style="z-index: 15;"></div>
+                <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A lush, high-resolution overhead shot of assorted artisanal pastries" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6DM3BMlX-tF9QwMpBfcrV4qwl_8IbRkPkhYkskTMo8NeKQmwWOopDUe-cNQ57jWqc1WHMgywJZJywMfKa5dM2l86eI7WaD7jwOxW4pI8cYA-Ys3OhJXiI0fXlxohaBEf3fnPpHJu1pUQbq68DrZyUeNFOW4MIAHvkrQRwqBd9ctgKlulcmDalKhyiX6wdpWiPOLMN2kui6rmCirJL4YzNT_M6emibnVuIjw5fmRUFyjf-7VFpfE6jTVTQRxSmyjFmOKe6zJOReuLH"/>
+                <div class="absolute bottom-6 left-12 z-20 max-w-3xl">
+                    <h1 class="text-white text-5xl md:text-7xl font-black leading-tight mb-2 drop-shadow-lg"> Sweet Dreams are Made of This</h1>
+                    <p class="text-white/90 text-lg md:text-xl font-medium mb-6">Indulge in our daily-baked collection of artisanal wonders.<br>Fresh, fluffy, and full of joy.</p>
+                    <button class="bg-primary text-white px-8 py-2 rounded-full font-black text-lg shadow-pink bouncy-hover">Explore Bakery</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sweet Categories -->
+        <section class="px-6 mb-16">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-3xl font-black text-on-surface tracking-tight">Daily Batch Highlights</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1: Warm & Fresh -->
+                <div class="group relative bg-tertiary-fixed/40 rounded-full p-8 flex flex-col items-center justify-center gap-3 cursor-pointer transition-all duration-500 hover:bg-tertiary-fixed hover:scale-105 border-2 border-transparent hover:border-tertiary/30">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-md shadow-tertiary/20 transition-transform duration-500 group-hover:rotate-12">
+                        <span class="material-symbols-outlined text-tertiary text-4xl">local_fire_department</span>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-black text-on-tertiary-fixed text-lg">Warm &amp; Fresh</h3>
+                        <p class="text-on-tertiary-fixed/70 text-xs font-medium">Artisanal morning bakes</p>
+                    </div>
+                </div>
+                <!-- Card 2: Limited Edition -->
+                <div class="group relative bg-primary-fixed/40 rounded-full p-8 flex flex-col items-center justify-center gap-3 cursor-pointer transition-all duration-500 hover:bg-primary-fixed hover:scale-105 border-2 border-transparent hover:border-primary/30">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-pink transition-transform duration-500 group-hover:-rotate-12">
+                        <span class="material-symbols-outlined text-primary text-4xl">star</span>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-black text-on-primary-fixed text-lg">Limited Edition</h3>
+                        <p class="text-on-primary-fixed/70 text-xs font-medium">Seasonal pitaya treats</p>
+                    </div>
+                </div>
+                <!-- Card 3: Staff Picks -->
+                <div class="group relative bg-secondary-fixed/40 rounded-full p-8 flex flex-col items-center justify-center gap-3 cursor-pointer transition-all duration-500 hover:bg-secondary-fixed hover:scale-105 border-2 border-transparent hover:border-secondary/30">
+                    <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-purple transition-transform duration-500 group-hover:rotate-12">
+                        <span class="material-symbols-outlined text-secondary text-4xl">thumb_up</span>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="font-black text-on-secondary-fixed text-lg">Staff Picks</h3>
+                        <p class="text-on-secondary-fixed/70 text-xs font-medium">Curated favorites</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chef's Special Highlight -->
+        <section class="px-6 mb-16">
+            <div class="bg-primary/5 rounded-xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-12 border-2 border-dashed border-primary/30 relative overflow-hidden">
+                <div class="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+                <div class="w-full md:w-1/2 aspect-square md:aspect-video rounded-2xl overflow-hidden shadow-purple border-2 border-white">
+                    <img class="w-full h-full object-cover" data-alt="Macro shot of Pink Velvet Mille-Feuille" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ5TAXU1efy2hybJRQr79wDeEFiqa5inKEry4rCXVVIGEZiqyP1mWI6F-C8sRH5Sar2fGZsSQXPWIixL8FCyGGA5xgJbUTm37tYbxixMzgfdQ5L_p2q5MtiGE8LCP4Lu0QwPP-IqJwziQ2FkEc-KoMPMm9Az09MHpsgMB6o1-wgzi_qw_nhaGMMrX1XBm_y6GM71ctidJu-4Xws3HFMqlRh32IgVpvHYosnjA2w46z-CZASvQ-dLpxKPSxykPSzBtjP9Eo1litulVl">
+                </div>
+                <div class="w-full md:w-1/2 relative z-10">
+                    <div class="flex flex-wrap items-center gap-2 mb-4">
+                        <span class="bg-secondary text-white px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest inline-block">Chef's Special</span>
+                        <span class="bg-primary text-white px-3 py-1 rounded-full text-xs font-black uppercase flex items-center gap-1">
+                        <span class="material-symbols-outlined text-xs">auto_awesome</span>
+                            Highly Recommended
+                        </span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-black mb-4 text-on-surface tracking-tight">The Pink Velvet Mille-Feuille</h2>
+                    <p class="text-on-surface-variant text-lg mb-8 leading-relaxed">Experience a masterclass in textures. Seven layers of hand-laminated pastry dough filled with our signature pink pitaya-infused chantilly cream and topped with fresh organic berries.</p>
+                    <div class="flex items-center gap-8">
+                        <div class="flex flex-col">
+                            <span class="text-xs font-bold text-primary uppercase tracking-widest">Special Price</span>
+                            <span class="text-4xl font-black text-primary">$12.50</span>
+                        </div>
+                        <button class="bg-primary text-white px-10 py-4 rounded-full font-black text-xl bouncy-hover shadow-pink hover:scale-110 transition-transform">
+                            Add to Bag
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products Grid -->
+        <section id="best-sellers" class="px-6 mb-20">
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-3xl font-black text-on-surface tracking-tight">Our Best Sellers</h2>
+                <div class="flex gap-2">
+                    <button class="p-2 rounded-full border border-outline-variant text-on-surface-variant hover:bg-surface-variant">
+                        <span class="material-symbols-outlined" data-icon="filter_list">filter_list</span>
+                    </button>
+                    <button class="p-2 rounded-full border border-outline-variant text-on-surface-variant hover:bg-surface-variant">
+                        <span class="material-symbols-outlined" data-icon="sort">sort</span>
+                    </button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-lg p-4 shadow-pink group bouncy-hover border border-surface-variant">
+                    <div class="relative aspect-square rounded-lg overflow-hidden mb-4">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Strawberry donut" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh73K1NB2NKl_4gucbbFMOC_tgyaaxm6KJ4rOCTQOK90eAGU9l4i-rYPfZJTqPImLpNGCHEDDyzss04U__oKH2HumynwEUzYEtUpgmEeTv-NRXVvji2sIsqaNPIpDfTLlS6T05NDQ7KVFTs4oKFzhXr306qwMi4v5zGJUL_1iPqwNraKuYKKW7PKiLdLit-9heZMnnz93emTsdSaIGSJCy270Fy6qXK-M3ImJ5P0noOEVxYq7uW2LMwqe-5PiDSKpMDkicKxiJUWzQ"/>
+                        <button class="absolute top-3 right-3 bg-white/80 backdrop-blur p-2 rounded-full text-primary hover:text-white hover:bg-primary transition-colors">
+                            <span class="material-symbols-outlined" data-icon="favorite" style='font-variation-settings: "FILL" 1;'>favorite</span>
+                        </button>
+                    </div>
+                    <h3 class="font-black text-xl text-on-surface mb-1">Strawberry Sprinkles</h3>
+                    <p class="text-on-surface-variant text-sm mb-4">Fluffy brioche base, real berry glaze.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-lg font-black text-primary">$4.50</span>
+                        <button class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center bouncy-hover shadow-pink">
+                            <span class="material-symbols-outlined" data-icon="add">add</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="bg-white rounded-lg p-4 shadow-pink group bouncy-hover border border-surface-variant">
+                    <div class="relative aspect-square rounded-lg overflow-hidden mb-4">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Rainbow Macarons" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsvy57eS57tz-W_I98zCOV12NkCWBb03PQX5CVgZAEOKTnTNmNymWukCXm7KaEL2EFBZPuyv6LaBnBrGyGbTttUlkHrhqrq8Eeg7a4quZoGh6vS2BtYzSNbqtrioyiZvCJQnF8x91dl-IYN5WBdgyChuRncZasABmmDGP6tquL6IzJvcotRggPDIWolAAu_NDJq14sAhHx8pZE54VhjpxmEyUE7fAdXdnnGrz8n_F1Go6EE_ZNfJBJuZ6z3EXBifrsnfdD--N5opYM"/>
+                        <button class="absolute top-3 right-3 bg-white/80 backdrop-blur p-2 rounded-full text-on-surface hover:text-primary transition-colors">
+                            <span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+                        </button>
+                    </div>
+                    <h3 class="font-black text-xl text-on-surface mb-1">Rainbow Macarons</h3>
+                    <p class="text-on-surface-variant text-sm mb-4">Pack of 6, assorted flavors.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-lg font-black text-primary">$14.00</span>
+                        <button class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center bouncy-hover shadow-pink">
+                            <span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="bg-white rounded-lg p-4 shadow-pink group bouncy-hover border border-surface-variant">
+                    <div class="relative aspect-square rounded-lg overflow-hidden mb-4">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Almond Croissant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLYxFZy2HoU6BbYAvIAwAvoASysDGMHYf594_nOZ6gw4il1OYAGSoVZ4Xqrujx2SgI_llazy-MbzH23hMtok-0uAqLiJLbrlrrFZkZBkSEFzQIIR7UBOt0ZIhKMh_eJexeR7_gH45ss7nbeRABootX_GLFzs2ALlNKjMZvY8ULdBZEgGFBUOkTxYKRi6qOk_Ro5COuEVxZyF2qTiE8lyfRbpftyHkQEjvKYnvr4b51T7c-NdOg0UY-MUD8Ed0Dltc9_e88p41LjAJ5"/>
+                        <button class="absolute top-3 right-3 bg-white/80 backdrop-blur p-2 rounded-full text-on-surface hover:text-primary transition-colors">
+                            <span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+                        </button>
+                    </div>
+                    <h3 class="font-black text-xl text-on-surface mb-1">Almond Croissant</h3>
+                    <p class="text-on-surface-variant text-sm mb-4">Double baked with almond frangipane.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-lg font-black text-primary">$5.50</span>
+                        <button class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center bouncy-hover shadow-pink">
+                            <span class="material-symbols-outlined" data-icon="add">add</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="bg-white rounded-lg p-4 shadow-pink group bouncy-hover border border-surface-variant">
+                    <div class="relative aspect-square rounded-lg overflow-hidden mb-4">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Ube Cake" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBVWbiy_7sOLsaDgFur79KYmS9seKSMD40cnWCegLtWng8lV2f_Xpur6vxVjFo1w7jsc-sinaK4HtsvIFujOz7COXsCGgeOK4nXdzPntguhIzz37SXW18WXPFJxWKkkbBlTBxsXjqZB7piSieS-DrvmYbWPx23muOJzQVcJKnhWQCg3tqpPrugwcud8PrvzzIapzfisp-Zv4jTobXNCmjm0tuN_BQpwZKh_VmBSVDmu9C7RHT3V_g6vK5_VW4Yc0Vd6CGGaGHZabGG"/>
+                        <button class="absolute top-3 right-3 bg-white/80 backdrop-blur p-2 rounded-full text-on-surface hover:text-primary transition-colors">
+                            <span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+                        </button>
+                    </div>
+                    <h3 class="font-black text-xl text-on-surface mb-1">Ube Dream Slice</h3>
+                    <p class="text-on-surface-variant text-sm mb-4">Purple yam sponge with coconut curd.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-lg font-black text-primary">$7.25</span>
+                        <button class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center bouncy-hover shadow-pink">
+                            <span class="material-symbols-outlined" data-icon="add">add</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 <!-- 1. Daily Baker's Dozen (Limited Edition) -->
 <section class="px-6 mb-20">
 <div class="flex items-end justify-between mb-8">
@@ -313,7 +339,7 @@ Limited Edition
 </div>
 </section>
 <!-- 2. Customer Sweet Spot (Testimonials) -->
-<section class="px-6 mb-20 bg-primary/5 py-16 -mx-6">
+<section id="reviews" class="px-6 mb-20 bg-primary/5 py-16 -mx-6">
 <div class="max-w-7xl mx-auto px-6">
 <div class="text-center mb-12">
 <h2 class="text-4xl font-black text-on-surface mb-4">Customer Sweet Spot</h2>
@@ -329,7 +355,7 @@ Limited Edition
 <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">star</span>
 <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">star</span>
 </div>
-<p class="text-on-secondary-container font-medium text-lg leading-relaxed mb-6">"The Ube Dream slice is actually life-changing. It's like eating a fluffy purple cloud! Best bakery in the city, hands down."</p>
+<p class="text-on-secondary-container font-medium text-lg leading-relaxed mb-6">The Ube Dream slice is actually life-changing. It's like eating a fluffy purple cloud! Best bakery in the city, hands down.</p>
 <div class="flex items-center gap-4">
 <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-white">
 <img alt="Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLYxFZy2HoU6BbYAvIAwAvoASysDGMHYf594_nOZ6gw4il1OYAGSoVZ4Xqrujx2SgI_llazy-MbzH23hMtok-0uAqLiJLbrlrrFZkZBkSEFzQIIR7UBOt0ZIhKMh_eJexeR7_gH45ss7nbeRABootX_GLFzs2ALlNKjMZvY8ULdBZEgGFBUOkTxYKRi6qOk_Ro5COuEVxZyF2qTiE8lyfRbpftyHkQEjvKYnvr4b51T7c-NdOg0UY-MUD8Ed0Dltc9_e88p41LjAJ5"/>
@@ -349,7 +375,7 @@ Limited Edition
 <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">star</span>
 <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">star</span>
 </div>
-<p class="text-on-primary-fixed font-medium text-lg leading-relaxed mb-6">"I ordered a box of macarons for my birthday and they were perfect. The packaging is so cute, I didn't even want to open it!"</p>
+<p class="text-on-primary-fixed font-medium text-lg leading-relaxed mb-6">I ordered a box of macarons for my birthday and they were perfect. The packaging is so cute, I didn't even want to open it!</p>
 <div class="flex items-center gap-4">
 <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-white">
 <img alt="Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsvy57eS57tz-W_I98zCOV12NkCWBb03PQX5CVgZAEOKTnTNmNymWukCXm7KaEL2EFBZPuyv6LaBnBrGyGbTttUlkHrhqrq8Eeg7a4quZoGh6vS2BtYzSNbqtrioyiZvCJQnF8x91dl-IYN5WBdgyChuRncZasABmmDGP6tquL6IzJvcotRggPDIWolAAu_NDJq14sAhHx8pZE54VhjpxmEyUE7fAdXdnnGrz8n_F1Go6EE_ZNfJBJuZ6z3EXBifrsnfdD--N5opYM"/>
@@ -369,7 +395,7 @@ Limited Edition
 <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">star</span>
 <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1">star</span>
 </div>
-<p class="text-on-tertiary-fixed font-medium text-lg leading-relaxed mb-6">"The delivery is so fast, the pastries are still warm when they arrive. That Pink Velvet Mille-Feuille is a masterpiece."</p>
+<p class="text-on-tertiary-fixed font-medium text-lg leading-relaxed mb-6">The delivery is so fast, the pastries are still warm when they arrive. That Pink Velvet Mille-Feuille is a masterpiece.</p>
 <div class="flex items-center gap-4">
 <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-white">
 <img alt="Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBVWbiy_7sOLsaDgFur79KYmS9seKSMD40cnWCegLtWng8lV2f_Xpur6vxVjFo1w7jsc-sinaK4HtsvIFujOz7COXsCGgeOK4nXdzPntguhIzz37SXW18WXPFJxWKkkbBlTBxsXjqZB7piSieS-DrvmYbWPx23muOJzQVcJKnhWQCg3tqpPrugwcud8PrvzzIapzfisp-Zv4jTobXNCmjm0tuN_BQpwZKh_VmBSVDmu9C7RHT3V_g6vK5_VW4Yc0Vd6CGGaGHZabGG"/>
@@ -447,36 +473,38 @@ Limited Edition
 <span class="font-label text-[10px] font-bold">Profile</span>
 </div>
 </footer>
-<script>
-        // Scroll interaction for TopAppBar
+    <script>
+        const nav = document.getElementById('main-nav');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section[id]');
+
+        function updateActiveNav() {
+            let currentSection = 'hero';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                if (window.scrollY >= sectionTop) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                const linkSection = link.getAttribute('data-section');
+                if (linkSection === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
         window.addEventListener('scroll', () => {
-            const nav = document.getElementById('top-app-bar');
             if (window.scrollY > 50) {
-                nav.classList.add('scroll-scrolled');
-                nav.classList.remove('bg-transparent');
-                nav.querySelectorAll('a, span').forEach(el => {
-                    if (!el.classList.contains('bg-primary') && !el.classList.contains('text-primary')) {
-                         el.classList.add('text-white');
-                         el.classList.remove('text-on-surface');
-                    }
-                });
+                nav.classList.add('scrolled');
             } else {
-                nav.classList.remove('scroll-scrolled');
-                nav.classList.add('bg-transparent');
-                nav.querySelectorAll('a, span').forEach(el => {
-                    if (el.classList.contains('font-black') && el.innerText === 'Sugar n' Whisk') {
-                        el.classList.add('text-primary');
-                        el.classList.remove('text-white');
-                    } else if (el.innerText === 'Discover') {
-                        el.classList.add('text-primary');
-                        el.classList.remove('text-white');
-                    } else {
-                        el.classList.add('text-on-surface');
-                        el.classList.remove('text-white');
-                    }
-                });
+                nav.classList.remove('scrolled');
             }
+            updateActiveNav();
         });
+
+        updateActiveNav();
 
         // Add to Bag animation
         document.querySelectorAll('button').forEach(btn => {
