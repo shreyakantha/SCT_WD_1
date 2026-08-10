@@ -131,7 +131,7 @@ This project is deployed and hosted for free using **GitHub Pages**.
 
 **Live Site :** [https://shreyakantha.github.io/SCT_WD_1/](https://shreyakantha.github.io/SCT_WD_1/)
 
-To deploy your own copy:
+To deploy your own copy :
 
 1. Push this repository to GitHub
 2. Go to your repository's **Settings → Pages**
@@ -190,6 +190,7 @@ The project is organized into separate files to maintain a clean, readable, and 
 - `logo-pink.png` is displayed by default before the page is scrolled.
 - `README.md` provides an overview, setup instructions, and project documentation.
 - `LICENSE` contains the licensing terms for the project.
+
 The code follows a clear structure with meaningful class names, organized sections, and modular JavaScript to improve readability and simplify future enhancements.
 
 ---
