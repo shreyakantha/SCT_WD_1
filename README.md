@@ -127,22 +127,20 @@ Choose either of the following methods :
 
 ---
 ## 🚀 Deployment
-
 This project is deployed and hosted for free using **GitHub Pages**.
 
-**Live Site:** [https://shreyakantha.github.io/SCT_WD_1/](https://shreyakantha.github.io/SCT_WD_1/)
+**Live Site :** [https://shreyakantha.github.io/SCT_WD_1/](https://shreyakantha.github.io/SCT_WD_1/)
 
 To deploy your own copy:
 
-1. Push this repository to GitHub.
-2. Go to your repository's **Settings → Pages**.
-3. Under **Build and deployment**, set **Source** to *Deploy from a branch*.
-4. Choose the `main` branch and `/ (root)` as the folder, then click **Save**.
-5. Your site will be live at `https://<username>.github.io/<repo-name>/` within a few minutes.
+1. Push this repository to GitHub
+2. Go to your repository's **Settings → Pages**
+3. Under **Build and deployment**, set **Source** to *Deploy from a branch*
+4. Choose the `main` branch and `/ (root)` as the folder, then click **Save**
+5. Your site will be live at `https://<username>.github.io/<repo-name>/` within a few minutes
 
 ---
 ## ⚙️ How It Works
-
 - The landing page loads with a transparent, fixed navigation bar that remains visible while scrolling.
 - As the user scrolls, JavaScript detects the scroll position and dynamically updates the navigation bar's appearance.
 - The active navigation link is highlighted based on the section currently in view.
@@ -152,7 +150,6 @@ To deploy your own copy:
 
 ---
 ## ⚡ Optimizations
-
 - Implemented a fixed navigation bar for improved accessibility.
 - Optimized scroll event handling for smooth navigation updates.
 - Used CSS transitions to create fluid animations and hover effects.
@@ -163,9 +160,7 @@ To deploy your own copy:
 
 ---
 ## 🧭 Roadmap
-
-Future enhancements planned for this project:
-
+Future enhancements planned for this project :
 - **Functional Shopping Cart** - Add items to a cart with quantity controls and a working checkout flow.
 - **Product Filtering & Sorting** - Make the filter/sort buttons in "Our Best Sellers" actually functional.
 - **Live Countdown Timer** - Replace the static timer in "Daily Baker's Dozen" with a real-time countdown.
@@ -187,41 +182,45 @@ Through this project, I learned how to :
 ---
 ## 📄 Documentation
 
-The project is organized into separate files to maintain a clean, readable, and easy-to-maintain codebase. Each file has a specific responsibility:
-
+The project is organized into separate files to maintain a clean, readable, and easy-to-maintain codebase. Each file has a specific responsibility :
 - `index.html` defines the structure and content of the landing page.
 - `style.css` manages the styling, responsive layout, animations, and visual appearance.
 - `script.js` handles the interactive functionality, including scroll-based navigation, active link highlighting, dynamic logo switching, and button interactions.
 - `logo.png` is displayed when the navigation bar changes after scrolling.
 - `logo-pink.png` is displayed by default before the page is scrolled.
-
+- `README.md` provides an overview, setup instructions, and project documentation.
+- `LICENSE` contains the licensing terms for the project.
 The code follows a clear structure with meaningful class names, organized sections, and modular JavaScript to improve readability and simplify future enhancements.
 
 ---
 ## 🤝 Contributing
 
-Contributions are always welcome! If you have a suggestion that would make this project better, please follow these steps:
+Contributions are always welcome! If you have a suggestion that would make this project better, please follow these steps :
 
-1. Fork the repository.
+1. Fork the repository
 2. Create a feature branch: `git checkout -b feature/amazing-feature`
 3. Commit your changes: `git commit -m "Add some amazing feature"`
 4. Push to the branch: `git push origin feature/amazing-feature`
-5. Open a **Pull Request**.
+5. Open a **Pull Request**
 
 ---
 ## 🧩 FAQ
 
-**Why does the page need an internet connection?**
-The project loads `Tailwind CSS`, `Google Fonts`, and `Material Symbols` from CDNs, so an internet connection is required for the full styling and icons to load.
+**Q1. Why does the page need an internet connection?**
 
-**How do I change the theme colors?**
-The color palette is defined in the `tailwind.config` block inside `script.js`. Update the color values there (e.g., `primary`, `secondary`, `tertiary`) and the entire page will update automatically.
+Answer. The project loads `Tailwind CSS`, `Google Fonts`, and `Material Symbols` from CDNs, so an internet connection is required for the full styling and icons to load.
 
-**How does the navigation bar change on scroll?**
-`script.js` listens for the scroll event. When `window.scrollY` exceeds `50`, it adds the `.scrolled` class to the navigation bar, which applies a pink background, blur effect, and white text.
+**Q2. How do I change the theme colors?**
 
-**How do I add a new product card?**
-Copy any existing product card in the "Our Best Sellers" section of `index.html`, update the image, name, description, and price, and it will automatically inherit the same styling and hover effects.
+Answer. The color palette is defined in the `tailwind.config` block inside `script.js`. Update the color values there (e.g., `primary`, `secondary`, `tertiary`) and the entire page will update automatically.
+
+**Q3. How does the navigation bar change on scroll?**
+
+Answer. `script.js` listens for the scroll event. When `window.scrollY` exceeds `50`, it adds the `.scrolled` class to the navigation bar, which applies a pink background, blur effect, and white text.
+
+**Q4. How do I add a new product card?**
+
+Answer. Copy any existing product card in the "Our Best Sellers" section of `index.html`, update the image, name, description, and price, and it will automatically inherit the same styling and hover effects.
 
 ---
 ## 🙌 Acknowledgements
@@ -247,7 +246,7 @@ It helps improve visibility, supports open- source learning, and motivates furth
 
 ---
 ## 💬 Feedback
-If you have any feedback or suggestions, feel free to reach out at 📧 shreyakantha348@gmail.com
+If you have any feedback or suggestions, feel free to reach out at 📧 shreyakantha348@gmail.com 
 
 ---
 ## 🧩 Appendix
