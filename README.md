@@ -129,7 +129,7 @@ Choose either of the following methods :
 ## 🚀 Deployment
 This project is deployed and hosted for free using **GitHub Pages**.
 
-**Live Site :** [https://shreyakantha.github.io/SCT_WD_1/](https://shreyakantha.github.io/SCT_WD_1/)
+**Live Site :** [Sugar n' Whisk - Responsive Landing Page](https://shreyakantha.github.io/SCT_WD_1/)
 
 To deploy your own copy :
 
